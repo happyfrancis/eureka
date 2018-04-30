@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+       defaultZone: http://localhost:8762/eureka/
+#设置是否注册到eureka server 实现eureka高可用
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: false #开发环境设置为false方便开发  为true时  若不断的重启client  server http访问端会有一个警告
+spring:
+  application:
+    name: eureka
+server:
+  port: 8762
